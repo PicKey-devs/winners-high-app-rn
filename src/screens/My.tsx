@@ -1,7 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {
+	SafeAreaView,
+	StyleSheet,
+	TouchableOpacity,
+	View,
+	Text,
+} from 'react-native';
 
-export default function My() {
+export default function My({ navigation }: any) {
 	return (
 		<View>
 			<Text>My Page</Text>
