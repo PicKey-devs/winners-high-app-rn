@@ -5,14 +5,14 @@ import styled from 'styled-components/native';
 
 const FloatButton = styled.TouchableOpacity``;
 
-export default function DefaultLayout({ children }: { children: any }) {
+export default function MainLayoutContainer({ children }: { children: any }) {
 	return (
 		<View
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				backgroundColor: 'red',
 				height: '100%',
+				padding: '24px',
 			}}
 		>
 			{children}
@@ -29,7 +29,6 @@ export default function DefaultLayout({ children }: { children: any }) {
 					justifyContent: 'center',
 					alignItems: 'center',
 				}}
-				// onPress={() => navigation.navigate('Details')}
 			>
 				<View>
 					<Ionicons name="add" size={32} color="white" />

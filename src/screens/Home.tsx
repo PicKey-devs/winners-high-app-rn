@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { FontAwesome5 } from '@expo/vector-icons';
+import { View, Text } from 'react-native';
 import { initTab } from '../core/initial-tabs';
-import { ToggleItem } from '../components/ToggleItem';
+import ChallengeItem from '../components/home/ChallengeItem';
 import MainLayoutContainer from '../layouts/MainLayoutContainer';
+import Styled from 'styled-components/native';
 
 export default function Home({ navigation }: { navigation: any }) {
 	const { onBindTabs } = initTab({ navigation });
@@ -15,8 +14,35 @@ export default function Home({ navigation }: { navigation: any }) {
 	return (
 		<MainLayoutContainer>
 			<View>
-				<Text>Home Page</Text>
+				<ScreenTitle>
+					<Text
+						style={{
+							fontSize: 20,
+							fontWeight: 'bold',
+							marginBottom: '20px',
+						}}
+					>
+						인증방 리스트
+					</Text>
+					<View>=</View>
+				</ScreenTitle>
+				{[1, 2, 3].map(() => (
+					<ChallengeItem
+						style={{
+							marginBottom: '20px',
+						}}
+					/>
+				))}
 			</View>
 		</MainLayoutContainer>
 	);
 }
+
+const ScreenTitle = Styled.View`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: bold;
+
+`;
