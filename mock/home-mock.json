@@ -1,0 +1,83 @@
+[
+	{
+		"roomId": 1,
+		"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+		"title": "The Best of the Best",
+		"participantCount": 2,
+		"createdAt": "2017/01/01",
+		"myInfo": {
+			"authRate": 0.5
+		},
+		"recentUpdate": [
+			{
+				"name": "김철수",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			},
+			{
+				"name": "김철수",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			},
+			{
+				"name": "이영희",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			}
+		]
+	},
+	{
+		"roomId": 2,
+		"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+		"title": "The Best of the Best",
+		"participantCount": 4,
+		"createdAt": "2017/01/01",
+		"myInfo": {
+			"authRate": 0.5
+		},
+		"recentUpdate": [
+			{
+				"name": "김철수",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			},
+			{
+				"name": "이영희",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			},
+			{
+				"name": "김철수",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			},
+			{
+				"name": "이영희",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			}
+		]
+	},
+	{
+		"roomId": 3,
+		"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+		"title": "The Best of the Best",
+		"participantCount": 5,
+		"createdAt": "2017/01/01",
+		"myInfo": {
+			"authRate": 0.5
+		},
+		"recentUpdate": [
+			{
+				"name": "김철수",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			},
+			{
+				"name": "이영희",
+				"thumbnailUrl": "https://i.ytimg.com/vi/1ZQ2wZQZQ2w/maxresdefault.jpg",
+				"isRead": false
+			}
+		]
+	}
+]
