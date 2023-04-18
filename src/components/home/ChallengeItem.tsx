@@ -13,8 +13,8 @@ export default function ChallengeItem({ style }: { style: any }) {
 						display: 'flex',
 						flexDirection: 'column',
 						justifyContent: 'space-around',
-						paddingTop: '4px',
-						paddingBottom: '4px',
+						paddingTop: 4,
+						paddingBottom: 4,
 					}}
 				>
 					<ChallengeTitle>매일 플래너 쓰기</ChallengeTitle>
@@ -31,7 +31,7 @@ export default function ChallengeItem({ style }: { style: any }) {
 						marginTop: '10px',
 					}}
 				>
-					나의 인증률
+					<Text>나의 인증률</Text>
 				</View>
 				<View
 					style={{

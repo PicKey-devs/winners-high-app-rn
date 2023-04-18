@@ -15,16 +15,10 @@ export default function Home({ navigation }: { navigation: any }) {
 		<MainLayoutContainer>
 			<View>
 				<ScreenTitle>
-					<Text
-						style={{
-							fontSize: 20,
-							fontWeight: 'bold',
-							marginBottom: '20px',
-						}}
-					>
-						인증방 리스트
-					</Text>
-					<View>=</View>
+					<Text>인증방 리스트</Text>
+					<View>
+						<Text>=</Text>
+					</View>
 				</ScreenTitle>
 				{[1, 2, 3].map(() => (
 					<ChallengeItem
@@ -44,5 +38,4 @@ const ScreenTitle = Styled.View`
 	justify-content: space-between;
 	font-size: 20px;
 	font-weight: bold;
-
 `;
