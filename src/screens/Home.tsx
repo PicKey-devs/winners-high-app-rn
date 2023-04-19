@@ -4,6 +4,7 @@ import { initTab } from '../core/initial-tabs';
 import ChallengeItem from '../components/home/ChallengeItem';
 import MainLayoutContainer from '../layouts/MainLayoutContainer';
 import Styled from 'styled-components/native';
+import { font, my } from '../common/style';
 
 export default function Home({ navigation }: { navigation: any }) {
 	const { onBindTabs } = initTab({ navigation });
@@ -15,7 +16,7 @@ export default function Home({ navigation }: { navigation: any }) {
 		<MainLayoutContainer>
 			<View>
 				<ScreenTitle>
-					<Text>인증방 리스트</Text>
+					<Text style={{ ...font.lgBold, ...my.md }}>인증방 리스트</Text>
 					<View>
 						<Text>=</Text>
 					</View>
