@@ -43,9 +43,9 @@ export default function ChallengeThumbnail({
 }
 
 const ThumbnailItemView = styled.View`
-	width: ${(props: any) => props.size || 80}px;
-	height: ${(props: any) => props.size || 80}px;
-	border-radius: 50px;
+	width: ${(props: any) => props.size || 80};
+	height: ${(props: any) => props.size || 80};
+	border-radius: 50;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,9 +54,9 @@ const ThumbnailItemView = styled.View`
 `;
 
 const InnerCircle = styled.View`
-	width: ${(props: any) => props.size - 5 || 72}px;
-	height: ${(props: any) => props.size - 5 || 72}px;
-	border-radius: 50px;
+	width: ${(props: any) => props.size - 5 || 72};
+	height: ${(props: any) => props.size - 5 || 72};
+	border-radius: 50;
 	border: ${(props: any) => (props.size ? 1 : 3)}px solid #fff;
 	background-color: #fff;
 `;
