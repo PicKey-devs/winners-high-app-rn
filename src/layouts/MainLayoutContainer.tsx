@@ -12,7 +12,7 @@ export default function MainLayoutContainer({ children }: { children: any }) {
 				display: 'flex',
 				flexDirection: 'column',
 				height: '100%',
-				padding: '24px',
+				padding: 24,
 			}}
 		>
 			{children}

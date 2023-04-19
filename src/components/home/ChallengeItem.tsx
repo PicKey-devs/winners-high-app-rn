@@ -25,13 +25,18 @@ export default function ChallengeItem({ style }: { style: any }) {
 			<View>
 				<View
 					style={{
-						fontSize: '15px',
-						color: '#929292',
-						marginBottom: '4px',
-						marginTop: '10px',
+						marginBottom: 4,
+						marginTop: 10,
 					}}
 				>
-					<Text>나의 인증률</Text>
+					<Text
+						style={{
+							fontSize: 15,
+							color: '#929292',
+						}}
+					>
+						나의 인증률
+					</Text>
 				</View>
 				<View
 					style={{
@@ -39,23 +44,17 @@ export default function ChallengeItem({ style }: { style: any }) {
 						flexDirection: 'row',
 						alignItems: 'center',
 						justifyContent: 'space-between',
-						height: '24px',
+						height: 24,
 					}}
 				>
-					<Text
-						style={{
-							fontSize: '22px',
-						}}
-					>
-						75%
-					</Text>
+					<Text>75%</Text>
 					<ProgressBar>
 						<View
 							style={{
 								width: '75%',
 								height: '100%',
 								backgroundColor: '#80F988',
-								borderRadius: '10px',
+								borderRadius: 10,
 							}}
 						/>
 					</ProgressBar>
@@ -63,10 +62,10 @@ export default function ChallengeItem({ style }: { style: any }) {
 			</View>
 			<Text
 				style={{
-					fontSize: '15px',
+					fontSize: 15,
 					color: '#929292',
-					marginTop: '10px',
-					marginBottom: '4px',
+					marginTop: 10,
+					marginBottom: 4,
 				}}
 			>
 				최근 업데이트

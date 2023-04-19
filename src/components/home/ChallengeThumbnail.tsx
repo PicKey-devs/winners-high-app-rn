@@ -30,10 +30,11 @@ export default function ChallengeThumbnail({
 							height: '100%',
 							borderRadius: 50,
 						}}
-						source={
-							imgUrl ??
-							'https://fastly.picsum.photos/id/328/200/300.jpg?hmac=rUU8GIGsrhqhqkiTi6qIQXtGstAUmnv4yV1bc_Sns7w'
-						}
+						source={{
+							uri:
+								imgUrl ??
+								'https://fastly.picsum.photos/id/328/200/300.jpg?hmac=rUU8GIGsrhqhqkiTi6qIQXtGstAUmnv4yV1bc_Sns7w',
+						}}
 					/>
 				</InnerCircle>
 			</LinearGradient>
