@@ -9,6 +9,9 @@ import { font, my } from '../common/style';
 export default function Home({ navigation }: { navigation: any }) {
 	const { onBindTabs } = initTab({ navigation });
 	const [tabs, setTabs] = useState([]);
+
+	const goToChallengeDetail = () => navigation.navigate('BeatList');
+
 	React.useLayoutEffect(() => {
 		onBindTabs();
 	}, [navigation]);
@@ -23,6 +26,7 @@ export default function Home({ navigation }: { navigation: any }) {
 				</ScreenTitle>
 				{[1, 2, 3].map(() => (
 					<ChallengeItem
+						goToChallengeDetail={goToChallengeDetail}
 						style={{
 							marginBottom: 20,
 						}}

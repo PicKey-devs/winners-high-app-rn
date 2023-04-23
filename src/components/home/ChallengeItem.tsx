@@ -3,9 +3,15 @@ import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
 import ChallengeThumbnail from './ChallengeThumbnail';
 
-export default function ChallengeItem({ style }: { style: any }) {
+export default function ChallengeItem({
+	style,
+	goToChallengeDetail,
+}: {
+	style: any;
+	goToChallengeDetail: () => void;
+}) {
 	return (
-		<Container style={style}>
+		<Container style={style} onPress={goToChallengeDetail}>
 			<ChallengeInfo>
 				<ChallengeThumbnail />
 				<View
