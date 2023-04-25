@@ -17,9 +17,9 @@ export default function Home({ navigation }: { navigation: any }) {
 	}, [navigation]);
 	return (
 		<MainLayoutContainer>
-			<View>
+			<View className="bg-white">
 				<ScreenTitle>
-					<Text style={{ ...font.lgBold, ...my.md }}>인증방 리스트</Text>
+					<Text className="text-red-600">인증방 리스트</Text>
 					<View>
 						<Text>=</Text>
 					</View>
