@@ -11,7 +11,7 @@ export default function ChallengeItem({
 	goToChallengeDetail: () => void;
 }) {
 	return (
-		<Container style={style} onPress={goToChallengeDetail}>
+		<Container style={style}>
 			<ChallengeInfo>
 				<ChallengeThumbnail />
 				<View

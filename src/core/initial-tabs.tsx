@@ -12,7 +12,12 @@ export const initTab = ({ navigation }: any) => {
 	const onBindTabs = () => {
 		navigation.setOptions({
 			headerTitle: (props: any) => (
-				<Text {...props} style={{}}>
+				<Text
+					{...props}
+					style={{
+						fontSize: 22,
+					}}
+				>
 					WINNERSHIGH
 				</Text>
 			),

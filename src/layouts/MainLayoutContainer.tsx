@@ -21,7 +21,7 @@ export default function MainLayoutContainer({ children }: { children: any }) {
 				style={{
 					width: 60,
 					height: 60,
-					borderRadius: '50%',
+					borderRadius: 50,
 					backgroundColor: '#538EF4',
 					position: 'absolute',
 					bottom: 24,

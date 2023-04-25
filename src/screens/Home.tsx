@@ -17,7 +17,7 @@ export default function Home({ navigation }: { navigation: any }) {
 	}, [navigation]);
 	return (
 		<MainLayoutContainer>
-			<View className="bg-white">
+			<View>
 				<ScreenTitle>
 					<Text className="text-red-600">인증방 리스트</Text>
 					<View>
