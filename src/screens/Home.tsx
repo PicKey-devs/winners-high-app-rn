@@ -6,6 +6,9 @@ import MainLayoutContainer from '../layouts/MainLayoutContainer';
 import Styled from 'styled-components/native';
 import { font, my } from '../common/style';
 
+type ChallengeItemProps = {
+	style: any;
+};
 export default function Home({ navigation }: { navigation: any }) {
 	const { onBindTabs } = initTab({ navigation });
 	const [tabs, setTabs] = useState([]);
@@ -18,15 +21,16 @@ export default function Home({ navigation }: { navigation: any }) {
 	return (
 		<MainLayoutContainer>
 			<View>
-				<ScreenTitle>
+				<View>
 					<Text className="text-red-600">인증방 리스트</Text>
 					<View>
 						<Text>=</Text>
 					</View>
-				</ScreenTitle>
+				</View>
 				{[1, 2, 3].map(() => (
 					<ChallengeItem
 						goToChallengeDetail={goToChallengeDetail}
+						navigation={{ navigation }}
 						style={{
 							marginBottom: 20,
 						}}
@@ -37,10 +41,6 @@ export default function Home({ navigation }: { navigation: any }) {
 	);
 }
 
-const ScreenTitle = Styled.View`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	font-size: 20px;
-	font-weight: bold;
-`;
+Home.defaultProps = {
+	navigation: {},
+};

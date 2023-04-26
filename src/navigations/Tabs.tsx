@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, My } from '../screens';
+import { Home, My, ChallengeDetail } from '../screens';
 import { MaterialIcons } from '@expo/vector-icons';
 import { TabNavigationOptions } from '../common/constant';
 

@@ -3,15 +3,24 @@ import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
 import ChallengeThumbnail from './ChallengeThumbnail';
 
+type ChallengeItemProps = {
+	style: any;
+	goToChallengeDetail: any;
+	navigation: any;
+};
+
 export default function ChallengeItem({
 	style,
 	goToChallengeDetail,
-}: {
-	style: any;
-	goToChallengeDetail: () => void;
-}) {
+	navigation,
+}: ChallengeItemProps) {
 	return (
-		<Container style={style} onPress={() => {}}>
+		<Container
+			style={style}
+			onPress={() => {
+				navigation.navigate('ChallengeDetail');
+			}}
+		>
 			<ChallengeInfo>
 				<ChallengeThumbnail />
 				<View className="flex-1 ml-4 mr-4 flex flex-col justify-around pt-1 pb-1">
@@ -69,7 +78,7 @@ export default function ChallengeItem({
 	);
 }
 
-const Container = styled.View`
+const Container = styled.TouchableOpacity`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
