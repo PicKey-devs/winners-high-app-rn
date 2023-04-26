@@ -16,6 +16,8 @@ export const initTab = ({ navigation }: any) => {
 					{...props}
 					style={{
 						fontSize: 22,
+						fontWeight: 'bold',
+						fontFamily: 'montserrat',
 					}}
 				>
 					WINNERSHIGH
@@ -24,29 +26,29 @@ export const initTab = ({ navigation }: any) => {
 			headerTitleAlign: 'left',
 			headerStyle: {},
 			headerRight: () => (
-				<View style={{ display: 'flex', flexDirection: 'row' }}>
+				<View className="flex items-center justify-center flex-row">
 					<TouchableOpacity
+						className="mr-4 flex flex-row"
 						onPress={() => alert('Right Menu Clicked')}
-						style={{ marginRight: 10, display: 'flex', flexDirection: 'row' }}
 					>
 						<View>
-							<FontAwesome5 name="bell" size={24} color="black" />
+							<FontAwesome5 name="bell" size={20} color="black" />
 						</View>
 					</TouchableOpacity>
 					<TouchableOpacity
+						className="mr-4 flex flex-row"
 						onPress={() => alert('Right Menu Clicked')}
-						style={{ marginRight: 10, display: 'flex', flexDirection: 'row' }}
 					>
 						<View>
-							<Ionicons name="search" size={32} color="black" />
+							<Ionicons name="search" size={24} color="black" />
 						</View>
 					</TouchableOpacity>
 					<TouchableOpacity
+						className="mr-4 flex flex-row"
 						onPress={() => alert('Right Menu Clicked')}
-						style={{ marginRight: 10, display: 'flex', flexDirection: 'row' }}
 					>
 						<View>
-							<Ionicons name="menu" size={32} color="black" />
+							<Ionicons name="menu" size={24} color="black" />
 						</View>
 					</TouchableOpacity>
 				</View>

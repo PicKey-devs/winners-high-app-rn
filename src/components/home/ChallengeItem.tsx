@@ -11,30 +11,17 @@ export default function ChallengeItem({
 	goToChallengeDetail: () => void;
 }) {
 	return (
-		<Container style={style}>
+		<Container style={style} onPress={() => {}}>
 			<ChallengeInfo>
 				<ChallengeThumbnail />
-				<View
-					style={{
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'space-around',
-						paddingTop: 4,
-						paddingBottom: 4,
-					}}
-				>
+				<View className="flex-1 ml-4 mr-4 flex flex-col justify-around pt-1 pb-1">
 					<ChallengeTitle>매일 플래너 쓰기</ChallengeTitle>
 					<ChallengeDescription>참여인원 ∙ 4명</ChallengeDescription>
 					<ChallengeCreatedAt>개설일 ∙ 2023/03/02</ChallengeCreatedAt>
 				</View>
 			</ChallengeInfo>
 			<View>
-				<View
-					style={{
-						marginBottom: 4,
-						marginTop: 10,
-					}}
-				>
+				<View className="flex flex-row justify-between items-center mb-2 mt-4">
 					<Text
 						style={{
 							fontSize: 15,
@@ -44,15 +31,7 @@ export default function ChallengeItem({
 						나의 인증률
 					</Text>
 				</View>
-				<View
-					style={{
-						display: 'flex',
-						flexDirection: 'row',
-						alignItems: 'center',
-						justifyContent: 'space-between',
-						height: 24,
-					}}
-				>
+				<View className="flex flex-row justify-between items-center">
 					<Text>75%</Text>
 					<ProgressBar>
 						<View

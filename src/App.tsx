@@ -5,9 +5,10 @@ import { useFonts } from 'expo-font';
 import React from 'react';
 export default function App() {
 	let [fontsLoaded] = useFonts({
-		'Edu-SA-Beginner-regular': require('../assets/fonts/NotoSansKR-Regular.otf'),
-		'Edu-SA-Beginner-medium': require('../assets/fonts/NotoSansKR-Medium.otf'),
-		'Edu-SA-Beginner-bold': require('../assets/fonts/NotoSansKR-Bold.otf'),
+		'noto-sans-kr-regular': require('../assets/fonts/NotoSansKR-Regular.otf'),
+		'noto-sans-kr-medium': require('../assets/fonts/NotoSansKR-Medium.otf'),
+		'noto-sans-kr-bold': require('../assets/fonts/NotoSansKR-Bold.otf'),
+		'montserrat-bold': require('../assets/fonts/Montserrat-Bold.ttf'),
 	});
 
 	if (!fontsLoaded) {
