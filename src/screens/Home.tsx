@@ -30,7 +30,7 @@ export default function Home({ navigation }: { navigation: any }) {
 				{[1, 2, 3].map(() => (
 					<ChallengeItem
 						goToChallengeDetail={goToChallengeDetail}
-						navigation={{ navigation }}
+						navigation={navigation}
 						style={{
 							marginBottom: 20,
 						}}
