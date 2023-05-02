@@ -3,18 +3,17 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home, My, ChallengeDetail } from '../screens';
 import { MaterialIcons } from '@expo/vector-icons';
 import { TabNavigationOptions } from '../common/constant';
-
+import { HomeStacks } from './HomeStacks';
 const Tabs = createBottomTabNavigator();
 
 export const TabNav = () => {
 	return (
 		<Tabs.Navigator
-			initialRouteName="Home"
+			initialRouteName="HomeStacks"
 			screenOptions={TabNavigationOptions.screenOptions}
 			tabBarOptions={TabNavigationOptions.tabBarOptions}
 		>
-			<Tabs.Screen name="Home" component={Home} />
-			<Tabs.Screen name="My" component={My} />
+			<Tabs.Screen name="HomeStacks" component={HomeStacks} />
 		</Tabs.Navigator>
 	);
 };

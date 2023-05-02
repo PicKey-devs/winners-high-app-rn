@@ -6,11 +6,14 @@ import {
 	View,
 	Text,
 } from 'react-native';
+import DefaultLayoutContainer from '../layouts/DefaultLayoutContainer';
 
 export default function My({ navigation }: any) {
 	return (
-		<View>
-			<Text>My Page</Text>
-		</View>
+		<DefaultLayoutContainer>
+			<View>
+				<Text>My Page</Text>
+			</View>
+		</DefaultLayoutContainer>
 	);
 }

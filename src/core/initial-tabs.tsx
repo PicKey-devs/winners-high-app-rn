@@ -24,15 +24,14 @@ export const initTab = ({ navigation }: any) => {
 				</Text>
 			),
 			headerTitleAlign: 'left',
-			headerStyle: {},
 			headerRight: () => (
-				<View className="flex items-center justify-center flex-row">
+				<View className="flex items-center justify-center flex-row w-fit">
 					<TouchableOpacity
 						className="mr-4 flex flex-row"
 						onPress={() => alert('Right Menu Clicked')}
 					>
 						<View>
-							<FontAwesome5 name="bell" size={20} color="black" />
+							<FontAwesome5 name="bell" size={24} color="black" />
 						</View>
 					</TouchableOpacity>
 					<TouchableOpacity
