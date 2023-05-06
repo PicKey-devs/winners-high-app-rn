@@ -2,7 +2,9 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import ChallengeTabForm from '../components/challenge/ChallengeTabForm';
 
 export default function ChallengeDetail({ navigation }: { navigation: any }) {
 	navigation.setOptions({
@@ -43,7 +45,7 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 						height: 10,
 						backgroundColor: '#f2f2f2',
 					}}
-				></View>
+				/>
 				<View
 					className="px-6"
 					style={{
@@ -106,7 +108,7 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 						</TouchableOpacity>
 					</View>
 				</View>
-				<View>
+				<View className="flex flex-row items-center justify-between pl-4 pr-4">
 					<TouchableOpacity
 						className="flex flex-column items-center"
 						onPress={() => navigation.goBack()}
@@ -153,10 +155,166 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 							3/11 토
 						</Text>
 					</TouchableOpacity>
-					<TouchableOpacity className="flex flex-row items-center">
-						<Text>월</Text>
+					<TouchableOpacity className="flex flex-column items-center">
+						<Text
+							className="mb-2"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							월
+						</Text>
+						<View
+							style={{
+								height: 35,
+								width: 35,
+								borderRadius: 50,
+								backgroundColor: '#D4D8DA',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							<FontAwesome5 name="check" size={14} color="white" />
+						</View>
+						<Text
+							className="mt-1"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							6
+						</Text>
+					</TouchableOpacity>
+					<TouchableOpacity className="flex flex-column items-center">
+						<Text
+							className="mb-2"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							월
+						</Text>
+						<View
+							style={{
+								height: 35,
+								width: 35,
+								borderRadius: 50,
+								backgroundColor: '#D4D8DA',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							<FontAwesome5 name="check" size={14} color="white" />
+						</View>
+						<Text
+							className="mt-1"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							6
+						</Text>
+					</TouchableOpacity>
+					<TouchableOpacity className="flex flex-column items-center">
+						<Text
+							className="mb-2"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							월
+						</Text>
+						<View
+							style={{
+								height: 35,
+								width: 35,
+								borderRadius: 50,
+								backgroundColor: '#D4D8DA',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							<FontAwesome5 name="check" size={14} color="white" />
+						</View>
+						<Text
+							className="mt-1"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							6
+						</Text>
+					</TouchableOpacity>
+					<TouchableOpacity className="flex flex-column items-center">
+						<Text
+							className="mb-2"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							월
+						</Text>
+						<View
+							style={{
+								height: 35,
+								width: 35,
+								borderRadius: 50,
+								backgroundColor: '#D4D8DA',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							<FontAwesome5 name="check" size={14} color="white" />
+						</View>
+						<Text
+							className="mt-1"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							6
+						</Text>
+					</TouchableOpacity>
+					<TouchableOpacity className="flex flex-column items-center">
+						<Text
+							className="mb-2"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							월
+						</Text>
+						<View
+							style={{
+								height: 35,
+								width: 35,
+								borderRadius: 50,
+								backgroundColor: '#D4D8DA',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							<FontAwesome5 name="check" size={14} color="white" />
+						</View>
+						<Text
+							className="mt-1"
+							style={{
+								fontSize: 15,
+							}}
+						>
+							6
+						</Text>
 					</TouchableOpacity>
 				</View>
+				<View
+					className="mb-5 mt-5"
+					style={{
+						width: '100%',
+						height: 10,
+						backgroundColor: '#f2f2f2',
+					}}
+				/>
+				<ChallengeTabForm />
 			</ScrollView>
 			<View
 				style={{

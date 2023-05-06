@@ -1,3 +1,3 @@
-import ChallengeHeader from './ChallengeHeader.tsx';
+import ChallengeTabForm from './ChallengeTabForm';
 
-export { ChallengeHeader };
+export { ChallengeTabForm };
