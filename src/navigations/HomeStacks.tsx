@@ -21,12 +21,7 @@ export const HomeStacks = ({ navigation, route }: any) => {
 	}, [navigation, route]);
 
 	return (
-		<HomeStack.Navigator
-			initialRouteName="Home"
-			screenOptions={{
-				headerShown: false,
-			}}
-		>
+		<HomeStack.Navigator initialRouteName="Home">
 			<HomeStack.Screen name="Home" component={Home} />
 			<HomeStack.Screen name="ChallengeDetail" component={ChallengeDetail} />
 		</HomeStack.Navigator>
