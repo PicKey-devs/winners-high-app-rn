@@ -75,9 +75,12 @@ export default function Home({ navigation, route }: any) {
 				<View className="px-6">
 					<View className="flex flex-row align-center my-4 justify-between">
 						<Text className="text-bold text-lg font-bold">인증방 리스트</Text>
-						<View>
-							<Text>=</Text>
-						</View>
+						<FontAwesome5
+							style={{ transform: [{ rotate: '90deg' }] }}
+							name="sliders-h"
+							size={20}
+							color="black"
+						/>
 					</View>
 					{[1, 2, 3].map(() => (
 						<ChallengeItem

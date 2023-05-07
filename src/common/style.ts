@@ -14,6 +14,9 @@ export const globalStyles = StyleSheet.create({
 	BgWhite: {
 		backgroundColor: '#fff',
 	},
+	BgTheme: {
+		backgroundColor: '#538EF4',
+	},
 });
 
 export const color = StyleSheet.create({

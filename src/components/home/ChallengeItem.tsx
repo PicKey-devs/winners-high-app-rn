@@ -2,6 +2,9 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
 import ChallengeThumbnail from './ChallengeThumbnail';
+import BadgeLabel from '../BadgeLabel';
+import ProgressBar from '../ProgressBar';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 type ChallengeItemProps = {
 	style: any;
@@ -21,14 +24,47 @@ export default function ChallengeItem({
 				navigation.navigate('ChallengeDetail');
 			}}
 		>
-			<ChallengeInfo>
+			<View className="flex flex-row">
 				<ChallengeThumbnail />
 				<View className="flex-1 ml-4 mr-4 flex flex-col justify-around pt-1 pb-1">
-					<ChallengeTitle>매일 플래너 쓰기</ChallengeTitle>
+					<View className="flex flex-row flex align-center">
+						<BadgeLabel label={'루틴'} />
+						<Text className="ml-2 text-lg">매일 플래너 쓰기</Text>
+					</View>
 					<ChallengeDescription>참여인원 ∙ 4명</ChallengeDescription>
-					<ChallengeCreatedAt>개설일 ∙ 2023/03/02</ChallengeCreatedAt>
+					<View className="flex flex-row flex align-center">
+						<Text>방장</Text>
+						<Text>방장</Text>
+					</View>
+					<View className="flex flex-row flex align-center">
+						<Text>방장</Text>
+						<Text>방장</Text>
+					</View>
 				</View>
-			</ChallengeInfo>
+			</View>
+			<View>
+				<View className="flex flex-row justify-between items-center mb-2 mt-4">
+					<Text
+						style={{
+							fontSize: 15,
+							color: '#929292',
+						}}
+					>
+						팀 인증률
+					</Text>
+				</View>
+				<View className="flex flex-row justify-between items-center w-full">
+					<Text
+						className="mr-6 font-bold"
+						style={{
+							fontSize: 22,
+						}}
+					>
+						75%
+					</Text>
+					<ProgressBar />
+				</View>
+			</View>
 			<View>
 				<View className="flex flex-row justify-between items-center mb-2 mt-4">
 					<Text
@@ -40,39 +76,17 @@ export default function ChallengeItem({
 						나의 인증률
 					</Text>
 				</View>
-				<View className="flex flex-row justify-between items-center">
-					<Text>75%</Text>
-					<ProgressBar>
-						<View
-							style={{
-								width: '75%',
-								height: '100%',
-								backgroundColor: '#80F988',
-								borderRadius: 10,
-							}}
-						/>
-					</ProgressBar>
+				<View className="flex flex-row justify-between items-center w-full">
+					<Text
+						className="mr-6 font-bold"
+						style={{
+							fontSize: 22,
+						}}
+					>
+						75%
+					</Text>
+					<ProgressBar />
 				</View>
-			</View>
-			<Text
-				style={{
-					fontSize: 15,
-					color: '#929292',
-					marginTop: 10,
-					marginBottom: 4,
-				}}
-			>
-				최근 업데이트
-			</Text>
-			<View
-				style={{
-					display: 'flex',
-					flexDirection: 'row',
-				}}
-			>
-				<ChallengeThumbnail size={46} />
-				<ChallengeThumbnail size={46} />
-				<ChallengeThumbnail size={46} />
 			</View>
 		</Container>
 	);
@@ -107,15 +121,4 @@ const ChallengeCreatedAt = styled.Text`
 	font-size: 15px;
 	font-weight: 500;
 	color: #929292;
-`;
-
-const ProgressBar = styled.View`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	width: 80%;
-	height: 16px;
-	background-color: #f7f6f8;
-	border-radius: 10px;
 `;

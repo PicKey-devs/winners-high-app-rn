@@ -50,7 +50,6 @@ const ThumbnailItemView = styled.View`
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	margin-right: 16px;
 `;
 
 const InnerCircle = styled.View`
