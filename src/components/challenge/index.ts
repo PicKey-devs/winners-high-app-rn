@@ -1,3 +1,3 @@
-import ChallengeTabForm from './ChallengeTabForm';
+import BadgeTabForm from './BadgeTabForm';
 
-export { ChallengeTabForm };
+export { BadgeTabForm };
