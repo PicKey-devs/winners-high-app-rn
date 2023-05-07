@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import ChallengeItem from '../components/home/ChallengeItem';
+import CategoryList from '../components/home/CategoryList';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import DefaultLayoutContainer from '../layouts/DefaultLayoutContainer';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { initTab } from '../core/useTabs';
+import { Constant } from '../common/constant';
 
 type ChallengeItemProps = {
 	style: any;
 };
 export default function Home({ navigation, route }: any) {
-	const [tabs, setTabs] = useState([]);
-
+	const [selectedCategory, setSelectedCategory] = useState('all');
 	const { onBindTabs } = initTab();
 	React.useLayoutEffect(() => {
 		onBindTabs({ route });
@@ -60,28 +62,35 @@ export default function Home({ navigation, route }: any) {
 	});
 
 	return (
-		<ScrollView
-			showsVerticalScrollIndicator={false}
-			showsHorizontalScrollIndicator={false}
-		>
-			<View>
-				<View>
-					<Text className="text-red-600">인증방 리스트</Text>
-					<View>
-						<Text>=</Text>
+		<DefaultLayoutContainer>
+			<CategoryList
+				options={Constant.CHALLENGE_CATEGORY_LIST}
+				selectedCategory={selectedCategory}
+				setSelectedCategory={setSelectedCategory}
+			/>
+			<ScrollView
+				showsVerticalScrollIndicator={false}
+				showsHorizontalScrollIndicator={false}
+			>
+				<View className="px-6">
+					<View className="flex flex-row align-center my-4 justify-between">
+						<Text className="text-bold text-lg font-bold">인증방 리스트</Text>
+						<View>
+							<Text>=</Text>
+						</View>
 					</View>
+					{[1, 2, 3].map(() => (
+						<ChallengeItem
+							goToChallengeDetail={goToChallengeDetail}
+							navigation={navigation}
+							style={{
+								marginBottom: 20,
+							}}
+						/>
+					))}
 				</View>
-				{[1, 2, 3].map(() => (
-					<ChallengeItem
-						goToChallengeDetail={goToChallengeDetail}
-						navigation={navigation}
-						style={{
-							marginBottom: 20,
-						}}
-					/>
-				))}
-			</View>
-		</ScrollView>
+			</ScrollView>
+		</DefaultLayoutContainer>
 	);
 }
 

@@ -314,15 +314,82 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 						backgroundColor: '#f2f2f2',
 					}}
 				/>
-				<ChallengeTabForm />
+				<ChallengeTabForm
+					tabs={[
+						{
+							label: '공지사항',
+							value: 1,
+						},
+						{
+							label: '인증방법',
+							value: 2,
+						},
+					]}
+				>
+					<View id="1">
+						<Text>공지사항</Text>
+					</View>
+					<View id="2">
+						<Text>인증방법</Text>
+					</View>
+				</ChallengeTabForm>
+				<ChallengeTabForm
+					tabs={[
+						{
+							label: '맴버 리스트',
+							value: 1,
+						},
+						{
+							label: '다짐 리스트',
+							value: 2,
+						},
+					]}
+				>
+					<View id="1">
+						<Text>맴버 리스트</Text>
+					</View>
+					<View id="2">
+						<Text>다짐 리스트</Text>
+					</View>
+				</ChallengeTabForm>
+				<ChallengeTabForm
+					tabs={[
+						{
+							label: '나의 인증 현황',
+							value: 1,
+						},
+						{
+							label: '전체 인증 현황',
+							value: 2,
+						},
+					]}
+				>
+					<View id="1">
+						<Text>나의 인증 현황</Text>
+					</View>
+					<View id="2">
+						<Text>전체 인증 현황</Text>
+					</View>
+				</ChallengeTabForm>
 			</ScrollView>
 			<View
+				className="flex items-center justify-center"
 				style={{
 					height: 60,
 					width: '100%',
-					backgroundColor: 'blue',
+					backgroundColor: '#538EF4',
 				}}
-			></View>
+			>
+				<Text
+					style={{
+						fontSize: 20,
+						color: 'white',
+						fontWeight: 'bold',
+					}}
+				>
+					인증하기
+				</Text>
+			</View>
 		</SafeAreaView>
 	);
 }
