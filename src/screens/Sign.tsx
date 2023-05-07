@@ -24,7 +24,7 @@ export default function Sign({ navigation }: any) {
 								width: 20,
 								height: 20,
 							}}
-							source={require('../../assets/icons/icon-apple-logo@3.png')}
+							source={require('../../assets/icon_naver_logo@3x.png')}
 						/>
 						<Text>Sign</Text>
 					</TouchableOpacity>
@@ -37,7 +37,7 @@ export default function Sign({ navigation }: any) {
 								width: 20,
 								height: 20,
 							}}
-							source={require('../../assets/icons/icon-apple-logo@3.png')}
+							source={require('../../assets/icon_naver_logo@3x.png')}
 						/>
 						<Text>Sign</Text>
 					</TouchableOpacity>
@@ -50,7 +50,7 @@ export default function Sign({ navigation }: any) {
 								width: 20,
 								height: 20,
 							}}
-							source={require('../../assets/icons/icon-apple-logo@3.png')}
+							source={require('../../assets/icon_naver_logo@3x.png')}
 						/>
 						<Text>Sign</Text>
 					</TouchableOpacity>
@@ -63,7 +63,7 @@ export default function Sign({ navigation }: any) {
 								width: 20,
 								height: 20,
 							}}
-							source={require('../../assets/icons/')}
+							source={require('../../assets/icon_naver_logo@3x.png')}
 						/>
 						<Text>Sign</Text>
 					</TouchableOpacity>
