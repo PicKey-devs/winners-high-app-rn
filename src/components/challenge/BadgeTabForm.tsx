@@ -23,7 +23,7 @@ export default function BadgeTabForm({ children }: BadgeTabFormProps) {
 	useEffect(() => {}, []);
 
 	return (
-		<View>
+		<View className="mb-8">
 			<CategoryList
 				options={tabs}
 				selectedCategory={selectedTab}

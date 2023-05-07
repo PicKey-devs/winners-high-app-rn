@@ -7,6 +7,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import BadgeTabForm from '../components/challenge/BadgeTabForm';
 import ChallengeThumbnail from '../components/home/ChallengeThumbnail';
 import BadgeLabel from '../components/BadgeLabel';
+import NotificationItem from '../components/NotificationItem';
+import CertificationStatus from '../components/CertificationStatus';
 
 export default function ChallengeDetail({ navigation }: { navigation: any }) {
 	navigation.setOptions({
@@ -111,10 +113,10 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 				/>
 				<BadgeTabForm>
 					<View id="1">
-						<Text>1</Text>
+						<NotificationItem />
 					</View>
 					<View id="2">
-						<Text>2</Text>
+						<CertificationStatus />
 					</View>
 					<View id="3">
 						<Text>3</Text>

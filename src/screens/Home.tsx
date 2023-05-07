@@ -15,9 +15,11 @@ export default function Home({ navigation, route }: any) {
 	const [selectedCategory, setSelectedCategory] = useState('all');
 	const { onBindTabs } = initTab();
 	React.useLayoutEffect(() => {
+		goToSignPage();
 		onBindTabs({ route });
 	});
 	const goToChallengeDetail = () => navigation.navigate('BeatList');
+	const goToSignPage = () => navigation.navigate('Sign');
 	navigation.setOptions({
 		headerTitle: (props: any) => (
 			<Text

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChallengeDetail, Home } from '../screens';
+import { ChallengeDetail, Home, Sign } from '../screens';
 import { createStackNavigator } from '@react-navigation/stack';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
@@ -24,6 +24,7 @@ export const HomeStacks = ({ navigation, route }: any) => {
 		<HomeStack.Navigator initialRouteName="Home">
 			<HomeStack.Screen name="Home" component={Home} />
 			<HomeStack.Screen name="ChallengeDetail" component={ChallengeDetail} />
+			<HomeStack.Screen name="Sign" component={Sign} />
 		</HomeStack.Navigator>
 	);
 };

@@ -6,7 +6,7 @@ import { globalStyles } from '../../common/style';
 interface CategoryListProps {
 	options: { label: string; value: number | string }[];
 	selectedCategory: number | string;
-	setSelectedCategory: (category: number | string) => void;
+	setSelectedCategory: (category: number | string) => any;
 }
 export default function CategoryList({
 	options,

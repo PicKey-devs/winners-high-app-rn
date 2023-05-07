@@ -17,6 +17,7 @@ export default function ProgressBar({ rate }: ProgressBarProps) {
 			{[1, 2, 3, 4].map((i) => {
 				return (
 					<View
+						key={i}
 						style={{
 							...styles.ProgressBarDivider,
 							left: `${i * 20}%`,
