@@ -9,7 +9,7 @@ const HomeStack = createStackNavigator();
 export const HomeStacks = ({ navigation, route }: any) => {
 	React.useLayoutEffect(() => {
 		const routeName = getFocusedRouteNameFromRoute(route);
-		if (routeName === 'ChallengeDetail') {
+		if (routeName === 'ChallengeDetail' || routeName === 'Sign') {
 			navigation.setOptions({
 				tabBarStyle: { display: 'none' },
 			});

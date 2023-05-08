@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, SafeAreaView } from 'react-native';
 import { globalStyles } from '../common/style';
 
 export default function DefaultLayoutContainer({
@@ -8,12 +8,12 @@ export default function DefaultLayoutContainer({
 	children: any;
 }) {
 	return (
-		<View
+		<SafeAreaView
 			style={{
 				...globalStyles.BgBase,
 			}}
 		>
 			{children}
-		</View>
+		</SafeAreaView>
 	);
 }
