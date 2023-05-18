@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import { HomeStacks } from './HomeStacks';
 import { MyStacks } from './MyStacks';
+import { View, Text } from 'react-native';
 
 const IndexTab = createBottomTabNavigator();
 

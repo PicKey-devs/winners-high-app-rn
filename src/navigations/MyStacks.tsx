@@ -8,7 +8,6 @@ export const MyStacks = () => {
 	return (
 		<HomeStack.Navigator initialRouteName="My">
 			<HomeStack.Screen name="My" component={My} />
-			
 		</HomeStack.Navigator>
 	);
 };

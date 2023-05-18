@@ -3,21 +3,53 @@ import { View, Text, StyleSheet } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 interface UserProfileProps {
+	size: number;
+	borderWidth?: number;
 	userId: number;
 	userThumbnail: string;
-	userName: string;
+	userName?: string;
+	isMaster?: boolean;
 }
 
-export default function UserProfile({}) {
+export default function UserProfile({
+	size,
+	borderWidth,
+	userId,
+	userThumbnail,
+	userName,
+	isMaster,
+}: UserProfileProps) {
 	return (
 		<View className="flex flex-row items-center">
-			<View style={styles.userThumbnail}>
-				<FontAwesome5 name="user-alt" size={16} color="white" />
-				<View style={styles.userMaster}>
-					<FontAwesome5 name="crown" size={8} color="white" />
-				</View>
+			<View
+				style={{
+					...styles.userThumbnail,
+					width: size,
+					height: size,
+					borderRadius: size / 2,
+				}}
+			>
+				<FontAwesome5
+					name="user-alt"
+					size={size ? size / 2 : 16}
+					color="white"
+				/>
+				{isMaster && (
+					<View
+						style={{
+							...styles.userMaster,
+							borderRadius: size / 2,
+						}}
+					>
+						<FontAwesome5
+							name="crown"
+							size={size ? size / 4 : 8}
+							color="white"
+						/>
+					</View>
+				)}
 			</View>
-			<Text className=" text-md ml-2">{'위너스하이'}</Text>
+			{userName && <Text className=" text-md ml-2">{userName}</Text>}
 		</View>
 	);
 }
@@ -25,14 +57,14 @@ export default function UserProfile({}) {
 UserProfile.defaultProps = {
 	userId: 0,
 	userThumbnail: '',
-	userName: 'test user',
+	userName: '',
+	size: 30,
+	borderWidth: 0,
+	isMaster: false,
 };
 
 const styles = StyleSheet.create({
 	userThumbnail: {
-		width: 30,
-		height: 30,
-		borderRadius: 15,
 		backgroundColor: '#C4C3C4',
 		display: 'flex',
 		justifyContent: 'center',
@@ -45,7 +77,6 @@ const styles = StyleSheet.create({
 		bottom: 0,
 		width: 13,
 		height: 13,
-		borderRadius: 6.5,
 		backgroundColor: '#538EF4',
 		display: 'flex',
 		justifyContent: 'center',

@@ -12,7 +12,7 @@ export default function NotificationItem() {
 	return (
 		<View className="flex flex-column align-center px-6">
 			<View className="flex flex-row align-center justify-between mb-4">
-				<UserProfile />
+				<UserProfile size={30} isMaster={true} userName={'위너스하이'} />
 				<View
 					style={{
 						display: 'flex',
@@ -47,7 +47,7 @@ export default function NotificationItem() {
 NotificationItem.defaultProps = {
 	userId: 0,
 	userThumbnail: '',
-	userName: 'test user',
+	userName: '',
 };
 
 const styles = StyleSheet.create({
