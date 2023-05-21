@@ -49,7 +49,6 @@ NotificationItem.defaultProps = {
 	userThumbnail: '',
 	userName: '',
 };
-
 const styles = StyleSheet.create({
 	notificationContents: {
 		width: '100%',
