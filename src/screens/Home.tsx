@@ -11,7 +11,7 @@ import { Constant } from '../common/constant';
 type ChallengeItemProps = {
 	style: any;
 };
-export default function Home({ navigation, route }: any) {
+export default function Home({ navigation, route, tabNav }: any) {
 	const [selectedCategory, setSelectedCategory] = useState('all');
 	const { onBindTabs } = initTab();
 	React.useLayoutEffect(() => {

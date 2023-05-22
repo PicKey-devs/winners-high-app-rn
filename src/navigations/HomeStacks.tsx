@@ -10,8 +10,12 @@ export const HomeStacks = ({ navigation, route }: any) => {
 	React.useLayoutEffect(() => {
 		const routeName = getFocusedRouteNameFromRoute(route);
 		if (routeName === 'ChallengeDetail' || routeName === 'Sign') {
+			console.log('ChallengeDetail');
 			navigation.setOptions({
-				tabBarStyle: { display: 'none' },
+				tabPress: (e: any) => {
+					e.preventDefault();
+				},
+				tabBarStyle: {},
 			});
 			return;
 		}
@@ -19,12 +23,17 @@ export const HomeStacks = ({ navigation, route }: any) => {
 			tabBarStyle: { display: 'flex' },
 		});
 	}, [navigation, route]);
+	// custom tab bar
 
 	return (
 		<HomeStack.Navigator initialRouteName="Home">
-			<HomeStack.Screen name="Home" component={Home} />
-			<HomeStack.Screen name="ChallengeDetail" component={ChallengeDetail} />
-			<HomeStack.Screen name="Sign" component={Sign} />
+			<HomeStack.Screen name="Home" component={Home} tabNav={navigation} />
+			<HomeStack.Screen
+				name="ChallengeDetail"
+				component={ChallengeDetail}
+				tabNav={navigation}
+			/>
+			<HomeStack.Screen name="Sign" component={Sign} tabNav={navigation} />
 		</HomeStack.Navigator>
 	);
 };

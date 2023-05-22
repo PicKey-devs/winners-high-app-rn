@@ -10,6 +10,21 @@ import { View, Text } from 'react-native';
 const IndexTab = createBottomTabNavigator();
 
 export const IndexTabs = () => {
+	const screenTabsEvent = ({ navigation, route, event }: any) => {
+		const currentScreen = route.state?.routes?.[route.state.index].name;
+		console.log(navigation, route);
+
+		switch (currentScreen) {
+			case 'ChallengeDetail':
+				console.log('ChallengeDetail');
+				event.preventDefault();
+				break;
+			default:
+				break;
+		}
+	};
+
+	const screenTabsStyle = () => {};
 	return (
 		<IndexTab.Navigator
 			initialRouteName="List"
@@ -28,8 +43,20 @@ export const IndexTabs = () => {
 				},
 			}}
 		>
-			<IndexTab.Screen name="List" component={HomeStacks} />
-			<IndexTab.Screen name="My" component={MyStacks} />
+			<IndexTab.Screen
+				name="List"
+				component={HomeStacks}
+				listeners={({ navigation, route }) => ({
+					tabPress: (e) => screenTabsEvent({ navigation, route, event: e }),
+				})}
+			/>
+			<IndexTab.Screen
+				name="My"
+				component={MyStacks}
+				listeners={({ navigation, route }) => ({
+					tabPress: (e) => screenTabsEvent({ navigation, route, event: e }),
+				})}
+			/>
 		</IndexTab.Navigator>
 	);
 };
