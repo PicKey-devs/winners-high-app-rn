@@ -1,15 +1,14 @@
 import React from 'react';
-import {
-	createBottomTabNavigator,
-	BottomTabNavigationOptions,
-} from '@react-navigation/bottom-tabs';
 import { HomeStacks } from './HomeStacks';
 import { MyStacks } from './MyStacks';
 import { View, Text } from 'react-native';
+import { ChallengeDetail, Home, Sign } from '../screens';
+import { createStackNavigator } from '@react-navigation/stack';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
-const IndexTab = createBottomTabNavigator();
+const IndexStack = createStackNavigator();
 
-export const IndexTabs = () => {
+export const IndexStacks = () => {
 	const screenTabsEvent = ({ navigation, route, event }: any) => {
 		const currentScreen = route.state?.routes?.[route.state.index].name;
 		console.log(navigation, route);
@@ -24,39 +23,18 @@ export const IndexTabs = () => {
 		}
 	};
 
-	const screenTabsStyle = () => {};
 	return (
-		<IndexTab.Navigator
+		<IndexStack.Navigator
 			initialRouteName="List"
 			screenOptions={{
-				tabBarIconStyle: { display: 'none' },
 				headerShown: false,
-				tabBarActiveBackgroundColor: '#538EF4',
-				tabBarInactiveBackgroundColor: '#fff',
-				tabBarActiveTintColor: '#fff',
-				tabBarInactiveTintColor: '#538EF4',
-				tabBarLabelPosition: 'beside-icon',
-				tabBarLabelStyle: {
-					fontWeight: '700',
-					fontSize: 20,
-					paddingRight: 20,
-				},
 			}}
 		>
-			<IndexTab.Screen
-				name="List"
-				component={HomeStacks}
-				listeners={({ navigation, route }) => ({
-					tabPress: (e) => screenTabsEvent({ navigation, route, event: e }),
-				})}
-			/>
-			<IndexTab.Screen
-				name="My"
-				component={MyStacks}
-				listeners={({ navigation, route }) => ({
-					tabPress: (e) => screenTabsEvent({ navigation, route, event: e }),
-				})}
-			/>
-		</IndexTab.Navigator>
+			<IndexStack.Screen name="List" component={HomeStacks} />
+			<IndexStack.Screen name="My" component={MyStacks} />
+			<IndexStack.Screen name="Home" component={Home} />
+			<IndexStack.Screen name="ChallengeDetail" component={ChallengeDetail} />
+			<IndexStack.Screen name="Sign" component={Sign} />
+		</IndexStack.Navigator>
 	);
 };
