@@ -7,7 +7,7 @@ import DefaultLayoutContainer from '../layouts/DefaultLayoutContainer';
 import { FontAwesome5 } from '@expo/vector-icons';
 import UserProfile from '../components/UserProfile';
 
-export default function My({ navigation }: any) {
+export default function My({ navigation, route }: any) {
 	navigation.setOptions({
 		headerTitle: (props: any) => (
 			<Text
@@ -51,7 +51,7 @@ export default function My({ navigation }: any) {
 		),
 	});
 	return (
-		<DefaultLayoutContainer>
+		<DefaultLayoutContainer navigation={navigation} route={route}>
 			<View className="flex flex-row items-center justify-center">
 				<UserProfile size={80} />
 				<View>

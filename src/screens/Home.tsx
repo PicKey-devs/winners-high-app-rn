@@ -64,7 +64,7 @@ export default function Home({ navigation, route, tabNav }: any) {
 	});
 
 	return (
-		<DefaultLayoutContainer>
+		<DefaultLayoutContainer navigation={navigation} route={route}>
 			<CategoryList
 				options={Constant.CHALLENGE_CATEGORY_LIST}
 				selectedCategory={selectedCategory}

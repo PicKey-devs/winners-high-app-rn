@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import DefaultLayoutContainer from '../layouts/DefaultLayoutContainer';
 
-export default function Sign({ navigation }: any) {
+export default function Sign({ navigation, route }: any) {
 	React.useLayoutEffect(() => {
 		navigation.setOptions({
 			headerShown: false,
@@ -17,7 +17,7 @@ export default function Sign({ navigation }: any) {
 	}, [navigation]);
 
 	return (
-		<DefaultLayoutContainer>
+		<DefaultLayoutContainer navigation={navigation} route={route}>
 			<View>
 				<View className="mx-16 my-32 flex flex-row justify-center items-center">
 					<Image style={styles.MainLogo} />

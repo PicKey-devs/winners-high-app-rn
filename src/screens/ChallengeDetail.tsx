@@ -9,8 +9,15 @@ import ChallengeThumbnail from '../components/home/ChallengeThumbnail';
 import BadgeLabel from '../components/BadgeLabel';
 import NotificationItem from '../components/NotificationItem';
 import CertificationStatus from '../components/CertificationStatus';
+import DefaultLayoutContainer from '../layouts/DefaultLayoutContainer';
 
-export default function ChallengeDetail({ navigation }: { navigation: any }) {
+export default function ChallengeDetail({
+	navigation,
+	route,
+}: {
+	navigation: any;
+	route: any;
+}) {
 	navigation.setOptions({
 		headerTransparent: true,
 		headerTitle: () => <Text>{''}</Text>,
@@ -24,12 +31,7 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 	});
 
 	return (
-		<SafeAreaView
-			style={{
-				flex: 1,
-				backgroundColor: '#fff',
-			}}
-		>
+		<DefaultLayoutContainer navigation={navigation} route={route}>
 			<ScrollView>
 				<View
 					style={{
@@ -123,24 +125,7 @@ export default function ChallengeDetail({ navigation }: { navigation: any }) {
 					</View>
 				</BadgeTabForm>
 			</ScrollView>
-			<View
-				className="flex items-center justify-center"
-				style={{
-					height: 60,
-					width: '100%',
-					backgroundColor: '#538EF4',
-				}}
-			>
-				<Text
-					style={{
-						fontSize: 20,
-						color: 'white',
-					}}
-				>
-					인증하기
-				</Text>
-			</View>
-		</SafeAreaView>
+		</DefaultLayoutContainer>
 	);
 }
 

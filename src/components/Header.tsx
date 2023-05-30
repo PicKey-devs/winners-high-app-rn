@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
-export default function BottomTabs({
+export default function Header({
 	state,
 	descriptors,
 	navigation,
