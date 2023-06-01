@@ -22,7 +22,7 @@ export const IndexStacks = () => {
 
 	return (
 		<IndexStack.Navigator
-			initialRouteName="List"
+			initialRouteName="Home"
 			screenOptions={{
 				headerShown: false,
 			}}
