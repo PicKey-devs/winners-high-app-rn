@@ -20,6 +20,11 @@ export const IndexStacks = () => {
 		}
 	};
 
+	// 스크린 변경될대마다 실행
+	React.useLayoutEffect(() => {
+		console.log('IndexStacks');
+	}, []);
+
 	return (
 		<IndexStack.Navigator
 			initialRouteName="Home"
@@ -33,3 +38,5 @@ export const IndexStacks = () => {
 		</IndexStack.Navigator>
 	);
 };
+
+con;

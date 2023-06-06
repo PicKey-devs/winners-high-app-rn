@@ -11,8 +11,10 @@ export default function BottomTabs({
 	const currentScreen = getFocusedRouteNameFromRoute(route);
 	console.log(currentScreen);
 	React.useLayoutEffect(() => {
+		console.log('BottomTabs', currentScreen);
 		console.log('BottomTabs', route);
-	}, [route]);
+	}, [currentScreen]);
+	//련재 탭
 	switch (currentScreen) {
 		default:
 			return (
