@@ -8,7 +8,6 @@ const IndexStack = createStackNavigator();
 export const IndexStacks = () => {
 	const screenTabsEvent = ({ navigation, route, event }: any) => {
 		const currentScreen = route.state?.routes?.[route.state.index].name;
-		console.log(navigation, route);
 
 		switch (currentScreen) {
 			case 'ChallengeDetail':
@@ -38,5 +37,3 @@ export const IndexStacks = () => {
 		</IndexStack.Navigator>
 	);
 };
-
-con;
