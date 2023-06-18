@@ -1,29 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { ChallengeDetail, Home, Sign } from '../screens';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 const IndexStack = createStackNavigator();
 
 export const IndexStacks = () => {
-	const screenTabsEvent = ({ navigation, route, event }: any) => {
-		const currentScreen = route.state?.routes?.[route.state.index].name;
-
-		switch (currentScreen) {
-			case 'ChallengeDetail':
-				console.log('ChallengeDetail');
-				event.preventDefault();
-				break;
-			default:
-				break;
-		}
-	};
-
-	// 스크린 변경될대마다 실행
-	React.useLayoutEffect(() => {
-		console.log('IndexStacks');
+	useEffect(() => {
+		console.log('화면 전환 이벤트 발생');
 	}, []);
-
 	return (
 		<IndexStack.Navigator
 			initialRouteName="Home"

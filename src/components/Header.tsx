@@ -4,7 +4,6 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 export default function Header({ state, descriptors, navigation, route }: any) {
 	const currentScreen = getFocusedRouteNameFromRoute(route);
-	console.log(currentScreen);
 	return (
 		<View
 			style={{
