@@ -8,6 +8,9 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import UserProfile from '../components/UserProfile';
 
 export default function My({ navigation, route }: any) {
+	React.useLayoutEffect(() => {
+		console.log('');
+	});
 	navigation.setOptions({
 		headerTitle: (props: any) => (
 			<Text

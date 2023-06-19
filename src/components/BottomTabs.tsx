@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
@@ -9,7 +9,8 @@ export default function BottomTabs({
 	route,
 }: any) {
 	const currentScreen = getFocusedRouteNameFromRoute(route);
-	//련재 탭
+	const [screen, setScreen] = useState(route.name || '');
+
 	switch (currentScreen) {
 		default:
 			return (
@@ -18,6 +19,7 @@ export default function BottomTabs({
 						...styles.BottomTabsWrapper,
 					}}
 				>
+					<Text>{screen}</Text>
 					<View
 						style={{
 							...styles.Button,

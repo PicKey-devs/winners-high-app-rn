@@ -18,18 +18,6 @@ export default function ChallengeDetail({
 	navigation: any;
 	route: any;
 }) {
-	navigation.setOptions({
-		headerTransparent: true,
-		headerTitle: () => <Text>{''}</Text>,
-		headerLeft: () => (
-			<View className="m-2">
-				<TouchableOpacity onPress={() => navigation.goBack()}>
-					<Ionicons name="chevron-back-outline" size={24} color="black" />
-				</TouchableOpacity>
-			</View>
-		),
-	});
-
 	return (
 		<DefaultLayoutContainer navigation={navigation} route={route}>
 			<ScrollView>
