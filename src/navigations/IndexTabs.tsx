@@ -6,9 +6,6 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 const IndexStack = createStackNavigator();
 
 export const IndexStacks = () => {
-	useEffect(() => {
-		console.log('화면 전환 이벤트 발생');
-	}, []);
 	return (
 		<IndexStack.Navigator
 			initialRouteName="Home"

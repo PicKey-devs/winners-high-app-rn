@@ -17,7 +17,7 @@ export default function Header({ state, descriptors, navigation, route }: any) {
 	const headerSwitch = useMemo(() => {
 		switch (screen) {
 			case 'Home':
-				return <DefaultHeader />;
+			return <DefaultHeader />;
 			case 'My':
 				return <Text>My</Text>;
 			case 'ChallengeDetail':
