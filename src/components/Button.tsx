@@ -9,7 +9,7 @@ interface Props
 	fontSize?: 16 | 18 | 20;
 }
 
-function Button({
+export default function Button({
 	title,
 	onPress,
 	variant = 'primary',
@@ -61,5 +61,3 @@ function Button({
 		</Pressable>
 	);
 }
-
-export default Button;
