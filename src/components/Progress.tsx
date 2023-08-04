@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 
 import { ProgressProps } from './components.props';
+import { twMerge } from 'tailwind-merge';
 
 export default function Progress({
 	targetRate,
@@ -9,7 +10,10 @@ export default function Progress({
 }: ProgressProps) {
 	return (
 		<View
-			className={`relative w-full h-[15px] bg-grey-1 rounded-50 overflow-hidden ${textClassName}`}
+			className={twMerge(
+				'relative w-full h-[15px] bg-grey-1 rounded-50 overflow-hidden',
+				textClassName,
+			)}
 		>
 			<View
 				className={`absolute h-full bg-grey-2 rounded-50 
