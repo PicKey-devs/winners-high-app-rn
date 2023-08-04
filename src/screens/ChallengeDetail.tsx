@@ -30,7 +30,7 @@ export default function ChallengeDetail({
 				<View className="flex flex-col pl-6 pl-6">
 					<View className="flex flex-row  pt-6">
 						<BadgeLabel label={'루틴'} />
-						<Text className="text-xl font-bold ml-3">매일 플래너 쓰기</Text>
+						<Text className="text-2xl font-bold ml-3">매일 플래너 쓰기</Text>
 					</View>
 					<Text className="pt-4 pb-6 text-lg">
 						매일 플래너 기록하고 루틴 만들기

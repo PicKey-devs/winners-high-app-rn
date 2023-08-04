@@ -10,7 +10,8 @@ module.exports = {
 			sm: ['14px', '20px'],
 			md: ['16px', '24px'],
 			lg: ['20px', '28px'],
-			xl: ['24px', '32px'],
+			xl: ['22px', '30px'],
+			'2xl': ['24px', '32px'],
 		},
 		colors: {
 			primary: '#538EF4',
@@ -26,6 +27,7 @@ module.exports = {
 			},
 		},
 		fontWeight: {
+			600: 600,
 			700: 700,
 		},
 		borderRadius: {
