@@ -1,5 +1,5 @@
 export interface ProgressProps {
-	targetRate: number;
-	rate: number;
+	targetPercentage: number;
+	percentage: number;
 	textClassName?: string;
 }

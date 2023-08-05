@@ -4,8 +4,8 @@ import { ProgressProps } from './components.props';
 import { twMerge } from 'tailwind-merge';
 
 export default function Progress({
-	targetRate,
-	rate,
+	targetPercentage,
+	percentage,
 	textClassName,
 }: ProgressProps) {
 	return (
@@ -17,16 +17,16 @@ export default function Progress({
 		>
 			<View
 				className={`absolute h-full bg-grey-2 rounded-50 
-				${targetRate === 100 ? '' : 'rounded-r-0'}`}
+				${targetPercentage === 100 ? '' : 'rounded-r-0'}`}
 				style={{
-					width: `${targetRate}%`,
+					width: `${targetPercentage}%`,
 				}}
 			/>
 			<View
 				className={`absolute h-full bg-primary rounded-50
-				${rate === 100 ? '' : 'rounded-r-0'}`}
+				${percentage === 100 ? '' : 'rounded-r-0'}`}
 				style={{
-					width: `${rate}%`,
+					width: `${percentage}%`,
 				}}
 			/>
 

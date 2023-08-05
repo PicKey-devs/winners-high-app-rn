@@ -12,8 +12,8 @@ interface Props extends Omit<ProgressProps, 'textClassName'> {
 export default function MemberProgress({
 	avatar,
 	username,
-	rate,
-	targetRate,
+	percentage,
+	targetPercentage,
 }: Props) {
 	return (
 		<View className="flex-row gap-[10px]">
@@ -23,9 +23,12 @@ export default function MemberProgress({
 				<Text className="font-500 text-lightBlack text-[18px]">{username}</Text>
 				<View className="flex-row gap-4 items-center">
 					<View className="flex-1">
-						<Progress rate={rate} targetRate={targetRate} />
+						<Progress
+							percentage={percentage}
+							targetPercentage={targetPercentage}
+						/>
 					</View>
-					<Text className="text-xl font-600">{rate}%</Text>
+					<Text className="text-xl font-600">{percentage}%</Text>
 				</View>
 			</View>
 		</View>

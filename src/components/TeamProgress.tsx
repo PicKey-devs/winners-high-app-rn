@@ -3,17 +3,17 @@ import Progress from './Progress';
 import { ProgressProps } from './components.props';
 
 export default function TeamProgress({
-	rate,
-	targetRate,
+	percentage,
+	targetPercentage,
 }: Omit<ProgressProps, 'textClassName'>) {
 	return (
 		<View className="flex-row gap-5 items-center">
-			<Text className="text-xl font-600">{rate}%</Text>
+			<Text className="text-xl font-600">{percentage}%</Text>
 			<View className="flex-1">
 				<View className="relative">
 					<Progress
-						rate={rate}
-						targetRate={targetRate}
+						percentage={percentage}
+						targetPercentage={targetPercentage}
 						textClassName="border-[2px] border-grey-2 h-[17px]"
 					/>
 					<Text className="absolute -top-full right-[80%] font-700 text-xs">
@@ -31,7 +31,7 @@ export default function TeamProgress({
 
 					{/* TODO: top-[calc(100%+10px)]로 안 되는 이유?? */}
 					<Text className="absolute top-[calc(17px+10px)] font-700 text-xs text-center w-full text-bluesky">
-						목표달성까지 {targetRate - rate}% 남음
+						목표달성까지 {targetPercentage - percentage}% 남음
 					</Text>
 				</View>
 			</View>
