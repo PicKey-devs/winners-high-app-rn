@@ -17,6 +17,7 @@ module.exports = {
 			primary: '#538EF4',
 			secondary: '#EAF6FF',
 			black: '#000000',
+			lightBlack: '#262626',
 			white: '#FFFFFF',
 			grey: {
 				1: '#F7F6F8',
@@ -27,6 +28,7 @@ module.exports = {
 			},
 		},
 		fontWeight: {
+			500: 500,
 			600: 600,
 			700: 700,
 		},

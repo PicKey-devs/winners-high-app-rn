@@ -19,7 +19,8 @@ export default function MemberProgress({
 		<View className="flex-row gap-[10px]">
 			<View>{avatar}</View>
 			<View className="flex-1">
-				<Text>{username}</Text>
+				{/* TODO: font size 하드코딩 제거 */}
+				<Text className="font-500 text-lightBlack text-[18px]">{username}</Text>
 				<View className="flex-row gap-4 items-center">
 					<View className="flex-1">
 						<Progress rate={rate} targetRate={targetRate} />
