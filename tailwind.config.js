@@ -7,6 +7,7 @@ module.exports = {
 	],
 	theme: {
 		fontSize: {
+			xs: ['12px', '18px'],
 			sm: ['14px', '20px'],
 			md: ['16px', '24px'],
 			lg: ['20px', '28px'],
@@ -26,6 +27,7 @@ module.exports = {
 				4: '#929292',
 				5: '#9C9C9C',
 			},
+			bluesky: '#81C9FF',
 		},
 		fontWeight: {
 			500: 500,
