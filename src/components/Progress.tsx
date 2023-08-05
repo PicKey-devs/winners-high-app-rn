@@ -24,7 +24,7 @@ export default function Progress({
 			/>
 			<View
 				className={`absolute h-full bg-primary rounded-50
-				${targetRate === 100 ? '' : 'rounded-r-0'}`}
+				${rate === 100 ? '' : 'rounded-r-0'}`}
 				style={{
 					width: `${rate}%`,
 				}}
