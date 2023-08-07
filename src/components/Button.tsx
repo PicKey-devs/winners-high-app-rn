@@ -1,12 +1,14 @@
 import { ComponentProps } from 'react';
 import { Pressable, Button as NativeButton, Text } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 
 interface Props
 	extends Pick<ComponentProps<typeof NativeButton>, 'title' | 'onPress'> {
-	variant?: 'primary' | 'secondary' | 'tertiary';
+	variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 	size?: 'large' | 'medium' | 'small';
 	radius?: 0 | 8 | 10;
 	fontSize?: 16 | 18 | 20;
+	textClassName?: string;
 }
 
 export default function Button({
@@ -16,6 +18,7 @@ export default function Button({
 	size = 'medium',
 	radius = 0,
 	fontSize = 16,
+	textClassName,
 	...props
 }: Props) {
 	return (
@@ -24,13 +27,15 @@ export default function Button({
 			style={{
 				borderRadius: radius,
 			}}
-			className={`
+			className={twMerge(
+				`
 			justify-center items-center
 			${
 				{
 					primary: 'bg-primary',
 					secondary: 'bg-secondary',
-					tertiary: 'bg-grey-5',
+					tertiary: 'bg-grey-4',
+					quaternary: 'bg-white',
 				}[variant]
 			}
 			${
@@ -40,7 +45,9 @@ export default function Button({
 					small: 'h-[50px]',
 				}[size]
 			}
-			`}
+			`,
+				textClassName,
+			)}
 		>
 			<Text
 				className={`
@@ -50,6 +57,7 @@ export default function Button({
 						primary: 'text-white',
 						secondary: 'text-primary',
 						tertiary: 'text-white',
+						quaternary: 'text-grey-4',
 					}[variant]
 				}
 				`}
