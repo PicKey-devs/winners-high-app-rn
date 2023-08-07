@@ -14,3 +14,17 @@ export function CheckboxIcon({
 		</Svg>
 	);
 }
+
+export function CancelIcon() {
+	return (
+		<Svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+			<Path
+				d="M3.36686 3.19995L17.5335 17.3666M3.2002 17.3666L17.3669 3.19995"
+				stroke="#262626"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+		</Svg>
+	);
+}
