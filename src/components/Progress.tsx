@@ -16,12 +16,12 @@ function Progress({
 	return (
 		<View
 			className={twMerge(
-				'relative w-full h-[15px] bg-grey-1 rounded-50 overflow-hidden',
+				'relative w-full h-[15px] bg-grey-#F7F6F8 rounded-50 overflow-hidden',
 				textClassName,
 			)}
 		>
 			<View
-				className={`absolute h-full bg-grey-2 rounded-50 
+				className={`absolute h-full bg-grey-#C4C3C4 rounded-50 
 				${targetPercentage === 100 ? '' : 'rounded-r-0'}`}
 				style={{
 					width: `${targetPercentage}%`,
@@ -86,7 +86,7 @@ export function TeamProgress({
 					<Progress
 						percentage={percentage}
 						targetPercentage={targetPercentage}
-						textClassName="border-[2px] border-grey-2 h-[17px]"
+						textClassName="border-[2px] border-grey-#C4C3C4 h-[17px]"
 					/>
 					<Text className="absolute -top-full right-[80%] font-700 text-xs">
 						20%

@@ -38,7 +38,9 @@ Modal.Header = function ({
 	textClassName?: string;
 }) {
 	return (
-		<View className={twMerge('border-b border-grey-5 p-6', textClassName)}>
+		<View
+			className={twMerge('border-b border-grey-#f2f2f2 p-6', textClassName)}
+		>
 			{children}
 		</View>
 	);

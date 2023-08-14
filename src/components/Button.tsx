@@ -34,7 +34,7 @@ export default function Button({
 				{
 					primary: 'bg-primary',
 					secondary: 'bg-secondary',
-					tertiary: 'bg-grey-4',
+					tertiary: 'bg-grey-#929292',
 					quaternary: 'bg-white',
 				}[variant]
 			}
@@ -57,7 +57,7 @@ export default function Button({
 						primary: 'text-white',
 						secondary: 'text-primary',
 						tertiary: 'text-white',
-						quaternary: 'text-grey-4',
+						quaternary: 'text-grey-#929292',
 					}[variant]
 				}
 				`}
