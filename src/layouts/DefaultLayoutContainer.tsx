@@ -24,5 +24,5 @@ export default function DefaultLayoutContainer({
 			<View style={{ flex: 1 }}>{children}</View>
 			<BottomTabs route={route} navigation={navigation} />
 		</SafeAreaView>
-	);#@@@
+	);
 }
